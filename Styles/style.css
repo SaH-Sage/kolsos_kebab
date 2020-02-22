@@ -1,0 +1,431 @@
+html {
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+*:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  background: #fff;
+  font-size: 16px;
+  height: 100%;
+  padding: 0 0 0 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Googl fonts*/
+u {
+  text-decoration: underline;
+}
+
+hr, br {
+  display: block;
+  position: relative;
+  clear: both;
+  width: 100%;
+  height: 0.14em;
+  margin: 1em auto;
+}
+
+hr.mobile {
+  display: none;
+}
+
+a:active {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+img.svg {
+  height: 1.5em;
+  position: absolute;
+  margin: -0.2em 0 0 -1.5em;
+}
+
+img.plain {
+  width: 100%;
+}
+
+.filter-invert {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+h1 span {
+  display: block;
+  clear: both;
+  padding: 0.1em 0;
+}
+
+/*9/            /*12/                                   /*9*/
+/*9*/
+/*9*/
+/*9*/
+/*9*/
+/* Double line break means styling of entierly new element
+      Line brek means new pice of styling of curent group
+        } means jumping back/lower is not child or directly connected to above
+          if no } above, this style is directly connected to above (childe or chare same properties)
+  */
+/* Phi: 1.61803398875    -   0.80901699437    -    1 - phi = 0.61803398875  --> /2 --> 30.9016994375 (for padding both)*/
+/* Tricks
+div[placeholder]:before {
+    content: attr(placeholder);
+    content: counter(line);         - http://jsfiddle.net/zppb29jw/5/
+}
+  */
+/*9/            /*12/                                   /*9*/
+/*9*/
+/*9*/
+/*9*/
+/*9*/
+div.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 850px;
+  height: 850px;
+  overflow: hidden;
+  color: #b70500;
+  font-size: 16px;
+  background: radial-gradient(circle, #ffe200 0%, #fb9d1d 67%);
+  background-position: 0 -1.0vh;
+  margin: 0 auto;
+  top: 2.5em;
+}
+
+div.menu * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: bold;
+}
+
+div.menu div.top {
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  padding-top: 20.5%;
+}
+
+div.menu div.top img {
+  position: absolute;
+  height: 85%;
+  left: 10%;
+  top: 8%;
+}
+
+div.menu div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+div.menu div div.dish {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 0px solid #000;
+}
+
+div.menu div div.dish div.prices {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+div.menu div div.dish div.prices div.rows {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 1.5em;
+}
+
+div.menu div div.dish div.prices div.rows p {
+  padding: 0em 0;
+}
+
+div.menu div div.dish div.prices div:not(:first-child) p:after {
+  content: "\00a0kr";
+}
+
+div.menu div div.dish div.prices div.Gram p:after {
+  content: "\00a0Gramm";
+}
+
+div.menu div div.dish div.prices div p.noPs:before, div.menu div div.dish div.prices div p.noPs:after {
+  display: none;
+}
+
+div.menu div div.dish h2 {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0em 0 0 0;
+  text-decoration: underline;
+  font-size: 2.25em;
+  width: 100%;
+}
+
+div.menu div div.dish h3 {
+  font-size: 1.6em;
+  margin: 0em 0 0.25em 0;
+}
+
+div.menu div div.burger {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+div.menu div div.burger div.prices {
+  padding: 0em 0 0 0;
+  right: 33%;
+}
+
+div.menu div div.burger div.prices div.rows {
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+}
+
+div.menu div div.burger div.prices div.rows:last-child {
+  top: 0.05em;
+}
+
+div.menu div div.burger div.prices div.rows:first-child {
+  right: 0;
+}
+
+div.menu div div.burger div.prices div.rows:last-child {
+  left: 0;
+  padding: 0;
+}
+
+div.menu div div.burger div.prices div.rows:nth-child(2) {
+  padding: 0 0.5em;
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+}
+
+div.menu div div.burger div.prices div.rows:nth-child(2) p:after {
+  display: none;
+}
+
+div.menu div div.burger div.prices:before {
+  content: "}";
+  position: absolute;
+  bottom: 4.0%;
+  font-size: 5.8em;
+  right: -0.39em;
+  font-weight: 10;
+}
+
+div.menu div div.burger div.prices:after {
+  content: "Ost +5 kr";
+  position: absolute;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  right: -7em;
+}
+
+div.menu div div.misc div.prices {
+  margin: 0 3em;
+}
+
+div.menu div div.misc div.prices div {
+  margin-bottom: 0.0em;
+}
+
+div.menu div div#burger div.prices:before {
+  -webkit-transform: scaleY(1.4);
+          transform: scaleY(1.4);
+  bottom: 16.0%;
+}
+
+div.menu div div#burger div.prices:after {
+  bottom: 43.5%;
+}
+
+div.menu div div#burger div.rows {
+  padding-bottom: 0.2em;
+}
+
+div.menu div div#bTallerken div.prices:before {
+  -webkit-transform: scaleY(1.19);
+          transform: scaleY(1.19);
+  bottom: 20.5%;
+}
+
+div.menu div div#bTallerken div.prices:after {
+  bottom: 49.5%;
+}
+
+div.menu div div#bTallerken div.rows {
+  padding-bottom: 1.25em;
+}
+
+div.menu div.bottom {
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 8em;
+  background: #9e090f;
+  color: #fff;
+}
+
+div.menu div.bottom div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.8em;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+div.menu div.bottom div p {
+  top: 0.04em;
+}
+
+div.menu div.bottom div:first-child {
+  left: 3.8%;
+}
+
+div.menu div.bottom div:first-child img {
+  height: 50%;
+}
+
+div.menu div.bottom div:first-child p {
+  left: 0.3em;
+}
+
+div.menu div.bottom div:last-child {
+  right: 1em;
+  left: 8.2%;
+}
+
+div.menu div.bottom div:last-child img {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+  height: 55%;
+}
+
+div.menu div.bottom div:last-child p {
+  left: 0.4em;
+}
+
+div.allIs {
+  font-size: 5em;
+  width: 0.5em;
+  height: 1em;
+  top: 35%;
+  left: 55%;
+  position: absolute;
+  color: steelblue;
+}
+
+div.allIs div {
+  position: absolute;
+  width: 100%;
+  background: steelblue;
+  height: 2em;
+}
+
+div.allIs div:first-child {
+  bottom: 0.5em;
+}
+
+div.allIs div:first-child div {
+  height: 0.5em;
+}
+
+div.allIs div:last-child {
+  top: 0.5em;
+}
+
+div.allIs div:last-child div {
+  height: 0.5em;
+  border: 0.5em solid;
+  background: transparent;
+}
+
+div.allIs div:last-child div:first-child {
+  top: -35%;
+  width: 100%;
+  border-radius: 100% 0 0 0;
+  border-color: blue green red #464646;
+  border-radius: 0% 0% 100% 0%;
+}
+
+div.allIs div:last-child div:last-child {
+  display: none;
+  background: green;
+}
+
+div.allIs div.height {
+  margin: 150% 0;
+}
+
+div.allIs div.end {
+  height: 0.5em;
+  left: 150%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+p.huge {
+  font-size: 34em;
+  color: #fff;
+  position: absolute;
+}
+/*# sourceMappingURL=style.css.map */
